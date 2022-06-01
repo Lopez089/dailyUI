@@ -1,0 +1,169 @@
+/*======================= FONT =================*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+/*======================= VARIABLES CSS =================*/
+
+:root {
+  --margin-height: 1.5rem;
+
+  /*--------color-----------*/
+
+  --orange-color: hsl(25, 97%, 53%);
+  --white: hsl(0, 82%, 43%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --medium-dark-blue: hsl(213, 11%, 32%);
+  --dark-blue: hsl(212, 23%, 22%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  /* --content-color:; */
+
+
+  /*--------font and typography-----------*/
+  --body-font: 'Overpass', sans-serif;
+
+  --biggest-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*--------font weight-----------*/
+  --font-medium: 400;
+  --font-semi-bold: 700;
+
+  /*-------- Margenes bottom-----------*/
+
+  --mb-0-25: .25rem;
+  --mb-0-5: .5rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+
+  /*--------z index-----------*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+
+  /*--------shadow-----------*/
+  /* --shadow: rgba(43, 0, 233, 0.2) 0px 8px 24px; */
+  ;
+
+  /* 
+    xs: `(max-width: ${size.xs})`,
+    sm: `(max-width: ${size.sm})`,
+    lg: `(max-width: ${size.lg})`
+  */
+
+  --device-xs: 375px;
+  --device-sm: 768px;
+  --device-lg: 1440px;
+
+}
+
+/*--------Responsive typography-----------*/
+@media screen and (min-width : 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*======================= BASE =================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+htm {
+  scroll-behavior: smooth;
+  font-size: 15px;
+}
+
+body,
+button input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  margin: var(--margin-height) 0 0 0;
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--white);
+  font-weight: var(--font-semi-bold);
+}
+
+p {
+  color: var(--light-grey);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+}
+
+/*=================REUSABLE CSS CLASS =================*/
+
+.container {
+  max-width: 968px;
+  margin: auto;
+}
+
+.gid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullview {
+  width: 100vw;
+  height: 100vh;
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.text-center {
+  text-align: center;
+}
